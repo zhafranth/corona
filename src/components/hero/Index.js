@@ -9,7 +9,7 @@ import {
   TitleTracker,
   DescTracker,
   WrapperTracker,
-  Card,
+  // Card,
   WrapperTitle,
   ImgWrapper,
   ImgCover,
@@ -26,6 +26,9 @@ import {
   LoadCardPeople,
 } from "./style";
 
+// Components
+import Card from "../cardCases/Index";
+
 // Reveal
 import Bounce from "react-reveal/Bounce";
 
@@ -33,11 +36,9 @@ import Bounce from "react-reveal/Bounce";
 import Icon1 from "assets/icons/icon1.svg";
 import Icon2 from "assets/icons/icon2.svg";
 import Icon3 from "assets/icons/icon3.svg";
-import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 
 // Images
 import ImgBgHero from "assets/images/bg-hero.png";
-import ImgBgCard from "assets/images/bg-card.png";
 import VirusBg from "assets/images/virusbg.png";
 
 const Hero = () => {
@@ -81,78 +82,34 @@ const Hero = () => {
           Last Update: <span>01 Februari 2021</span>
         </DescTracker>
         <WrapperTracker>
-          <Card>
-            <BgCard src={ImgBgCard} />
-            <WrapperTitle>
-              {indonesia.length != 0 ? (
-                <ImgWrapper color="#FFD7DF">
-                  <ImgCover src={Icon1} />
-                </ImgWrapper>
-              ) : (
-                <LoadCardIcon />
-              )}
-              {indonesia.length != 0 ? (
-                <TitleCard>Total Cases</TitleCard>
-              ) : (
-                <LoadCardTitle />
-              )}
-            </WrapperTitle>
-            {indonesia.length != 0 ? (
-              <WrapperCases>
-                <Cases fontColor="#FD4B6E">{indonesia}</Cases>
-                <BsFillCaretUpFill />
-              </WrapperCases>
-            ) : (
-              <LoadCardCases />
-            )}
-            {indonesia.length != 0 ? (
-              <People>People</People>
-            ) : (
-              <LoadCardPeople />
-            )}
-          </Card>
-          <Card>
-            <BgCard src={ImgBgCard} />
-            <WrapperTitle>
-              <ImgWrapper color="#FFDDC7">
-                <ImgCover src={Icon1} />
-              </ImgWrapper>
-              <TitleCard>Total Cases Jakarta</TitleCard>
-            </WrapperTitle>
-            <WrapperCases>
-              <Cases fontColor="#FF6E0E">{jakarta}</Cases>
-              <BsFillCaretUpFill />
-            </WrapperCases>
-            <People>People</People>
-          </Card>
-          <Card>
-            <BgCard src={ImgBgCard} />
-            <WrapperTitle>
-              <ImgWrapper color="#EBFFD8">
-                <ImgCover src={Icon2} />
-              </ImgWrapper>
-              <TitleCard>Recovered</TitleCard>
-            </WrapperTitle>
-            <WrapperCases>
-              <Cases fontColor="#7BD821">{recovered}</Cases>
-              <BsFillCaretUpFill />
-            </WrapperCases>
-            <People>People</People>
-          </Card>
-          <Card>
-            <BgCard src={ImgBgCard} />
-            <WrapperTitle>
-              <ImgWrapper color="#E8E1FF">
-                <ImgCover src={Icon3} />
-              </ImgWrapper>
-              <TitleCard>Death</TitleCard>
-            </WrapperTitle>
-            <WrapperCases>
-              <Cases fontColor="#9B7DFF">{death}</Cases>
-              <BsFillCaretUpFill />
-            </WrapperCases>
-            <People>People</People>
-          </Card>
+          <Card
+            cases={indonesia}
+            title="Total Cases"
+            icon={Icon1}
+            bgColor="#FFD7DF"
+            fontColor="#FD4B6E"
+          />
+          <Card
+            cases={jakarta}
+            title="Total Cases Jakarta"
+            icon={Icon1}
+            bgColor="#FFDDC7"
+            fontColor="#FF6E0E"
+          />
+          <Card
+            cases={recovered}
+            title="Recovered"
+            icon={Icon2}
+            bgColor="#EBFFD8"
+            fontColor="#7BD821"
+          />
+          <Card
+            cases={death}
+            title="Death"
+            icon={Icon3}
+            bgColor="#E8E1FF"
+            fontColor="#9B7DFF"
+          />
         </WrapperTracker>
       </HeroTracker>
     </MainHero>
