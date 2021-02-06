@@ -1,6 +1,11 @@
-import { Hero } from "./components";
+import { Hero, Symptoms } from "./components";
 function App() {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <Symptoms />
+    </>
+  );
 }
 
 export default App;
