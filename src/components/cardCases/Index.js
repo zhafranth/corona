@@ -36,7 +36,6 @@ const Index = ({ cases, icon, title, bgColor, fontColor }) => {
       {cases.length != 0 ? (
         <WrapperCases>
           <Cases fontColor={fontColor}>{cases}</Cases>
-          <BsFillCaretUpFill style={{ width: "30px", height: "30px" }} />
         </WrapperCases>
       ) : (
         <LoadCardCases />

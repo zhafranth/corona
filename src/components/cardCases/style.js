@@ -14,6 +14,7 @@ export const Card = styled.div`
   background-color: #fff;
   box-sizing: border-box;
   padding: 1.5rem;
+  cursor: default;
 `;
 
 export const WrapperTitle = styled.div`

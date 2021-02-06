@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import date from "date-and-time";
 import {
   MainHero,
   HeroContent,
@@ -9,21 +10,8 @@ import {
   TitleTracker,
   DescTracker,
   WrapperTracker,
-  // Card,
-  WrapperTitle,
-  ImgWrapper,
-  ImgCover,
-  TitleCard,
-  WrapperCases,
-  Cases,
-  People,
+  WrapperVirus,
   BgHero,
-  BgCard,
-  BgVirus,
-  LoadCardTitle,
-  LoadCardIcon,
-  LoadCardCases,
-  LoadCardPeople,
 } from "./style";
 
 // Components
@@ -39,13 +27,19 @@ import Icon3 from "assets/icons/icon3.svg";
 
 // Images
 import ImgBgHero from "assets/images/bg-hero.png";
-import VirusBg from "assets/images/virusbg.png";
+import Virus1 from "assets/images/virus1.png";
+import Virus2 from "assets/images/virus2.png";
+import Virus3 from "assets/images/virus3.png";
+import Virus4 from "assets/images/virus4.png";
 
 const Hero = () => {
   const [indonesia, setIndonesia] = useState([]);
   const [jakarta, setJakarta] = useState([]);
   const [recovered, setRecovered] = useState([]);
   const [death, setDeath] = useState([]);
+  const now = new Date();
+  const tanggal = date.format(now, "ddd, MMM DD YYYY");
+  console.log(tanggal);
 
   useEffect(() => {
     Axios.get("https://api.kawalcorona.com/indonesia")
@@ -64,9 +58,29 @@ const Hero = () => {
 
   return (
     <MainHero>
-      <Bounce left delay={300} speed="2000s">
-        <BgVirus src={VirusBg} />
-      </Bounce>
+      <WrapperVirus>
+        <Bounce delay={500} left speed="2000s">
+          <div>
+            <img src={Virus1} alt="virus" className="virus" id="virus1" />
+          </div>
+        </Bounce>
+        <Bounce delay={800} left speed="2000s">
+          <div>
+            <img src={Virus2} alt="virus1" className="virus" id="virus2" />
+          </div>
+        </Bounce>
+        <Bounce delay={1100} left speed="2000s">
+          <div>
+            <img src={Virus3} alt="virus2" className="virus" id="virus3" />
+          </div>
+        </Bounce>
+        <Bounce delay={1400} left speed="2000s">
+          <div>
+            <img src={Virus4} alt="virus3" className="virus" id="virus4" />
+          </div>
+        </Bounce>
+        <div className="square"></div>
+      </WrapperVirus>
       <BgHero src={ImgBgHero} />
       <HeroContent>
         <TitleContent>Stay Home Stay Safe</TitleContent>
@@ -79,7 +93,7 @@ const Hero = () => {
           Covid-19 <span>Indonesia Trend</span>
         </TitleTracker>
         <DescTracker>
-          Last Update: <span>01 Februari 2021</span>
+          Last Update: <span>{tanggal}</span>
         </DescTracker>
         <WrapperTracker>
           <Card
