@@ -1,6 +1,8 @@
 import React from "react";
 import { Main, Item, Title, Image, TitleMain } from "./style";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Carousel from "react-elastic-carousel";
 
 // Images
@@ -10,22 +12,31 @@ import Image3 from "assets/images/gejala3.png";
 import Image4 from "assets/images/gejala4.png";
 import Image5 from "assets/images/gejala5.png";
 import Image6 from "assets/images/gejala6.png";
+import Image7 from "assets/images/gejala7.png";
+import Image8 from "assets/images/gejala8.png";
+import Image9 from "assets/images/gejala9.png";
 
 const Symptoms = () => {
   const settings = {
-    dots: true,
-    infinite: false,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    speed: 3500,
+    dots: false,
+    infinite: true,
     slidesToShow: 6,
     slidesToScroll: 1,
   };
   return (
     <Main>
       <TitleMain>Symptoms</TitleMain>
-      <Carousel
-        itemsToScroll={1}
-        itemsToShow={6}
-        showArrows={false}
-        dots={false}
+      <Slider
+        // itemsToScroll={1}
+        // itemsToShow={6}
+        // showArrows={false}
+        // pagination={false}
+        // enableAutoPlay={true}
+        // autoPlaySpeed={200}
+        {...settings}
       >
         <Item>
           <Image src={Image1} alt="Cought" className="img-cover" />
@@ -52,10 +63,18 @@ const Symptoms = () => {
           <Title>Headache</Title>
         </Item>
         <Item>
-          <Image src={Image1} alt="Cought" className="img-cover" />
-          <Title>Cought</Title>
+          <Image src={Image7} alt="Cought" className="img-cover" />
+          <Title>Tired</Title>
         </Item>
-      </Carousel>
+        <Item>
+          <Image src={Image8} alt="Cought" className="img-cover" />
+          <Title>Nasal Congestion</Title>
+        </Item>
+        <Item>
+          <Image src={Image9} alt="Cought" className="img-cover" />
+          <Title>Fever</Title>
+        </Item>
+      </Slider>
     </Main>
   );
 };

@@ -2,12 +2,13 @@ import styled from "styled-components/macro";
 
 export const Main = styled.div`
   padding: 4rem 12vw;
-  .rec-pagination {
+  /* .rec-pagination {
     display: none;
-  }
+  } */
 `;
 export const Item = styled.div`
-  /* width: 167px; */
+  width: 167px !important;
+  outline: none;
 `;
 export const Title = styled.h3`
   font-weight: normal;

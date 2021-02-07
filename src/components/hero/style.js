@@ -11,7 +11,7 @@ const spinner = keyframes`
 export const MainHero = styled.div`
   position: relative;
   padding: 4rem 12vw;
-  height: 70vh;
+  /* height: 70vh; */
   display: flex;
   background: linear-gradient(
       357.42deg,
