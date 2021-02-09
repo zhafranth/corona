@@ -15,11 +15,20 @@ export const Card = styled.div`
   box-sizing: border-box;
   padding: 1.5rem;
   cursor: default;
+  @media screen and (max-width: 576px) {
+    padding: 0.8rem;
+    border-radius: 15px;
+  }
 `;
 
 export const WrapperTitle = styled.div`
   display: flex;
   align-items: center;
+  z-index: 2;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: baseline;
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -31,13 +40,26 @@ export const ImgWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
   background-color: ${(props) => props.color};
+  @media screen and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media screen and (max-width: 576px) {
+    margin-right: 0;
+  }
 `;
 
 export const ImgCover = styled.img`
   width: 30px;
   height: 30px;
   object-fit: cover;
+  z-index: 2;
+  @media screen and (max-width: 768px) {
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 export const TitleCard = styled.h5`
@@ -45,6 +67,14 @@ export const TitleCard = styled.h5`
   font-size: 20px;
   font-weight: 600;
   color: #0d003a;
+  z-index: 2;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+    margin: 0.5rem 0;
+  }
 `;
 
 export const WrapperCases = styled.div`
@@ -53,21 +83,31 @@ export const WrapperCases = styled.div`
 `;
 
 export const Cases = styled.h2`
+  z-index: 2;
   font-size: 52px;
   font-weight: 700;
   margin: 0;
   margin-right: 1rem;
   color: ${(props) => props.fontColor};
+  @media screen and (max-width: 768px) {
+    font-size: 35px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 20px;
+    margin-right: 0;
+  }
 `;
 
 export const People = styled.p`
   margin: 0;
+  z-index: 2;
 `;
 
 export const BgCard = styled.img`
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 `;
 
 // ======== Loading

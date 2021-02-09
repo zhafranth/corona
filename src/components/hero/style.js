@@ -21,10 +21,27 @@ export const MainHero = styled.div`
     #f4f9ff;
   box-sizing: border-box;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 576px) {
+    background: linear-gradient(
+        351.28deg,
+        #2b1285 11.4%,
+        rgba(86, 52, 209, 0) 93.79%
+      ),
+      #5634d1;
+  }
 `;
 export const HeroContent = styled.div`
   width: 30%;
   z-index: 2;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 export const TitleContent = styled.h2`
   font-weight: bold;
@@ -35,14 +52,31 @@ export const TitleContent = styled.h2`
     background-color: #9c81ff;
     color: #fff;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 48px;
+    margin: 20px 0;
+  }
+  @media screen and (max-width: 576px) {
+    color: #fff;
+  }
 `;
 export const DescContent = styled.p`
   font-size: 24px;
   font-weight: normal;
   color: #89859a;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 576px) {
+    color: #d1c5ff;
+  }
 `;
 export const HeroTracker = styled.div`
   width: 65%;
+  z-index: 2;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 export const TitleTracker = styled.div`
   font-size: 28px;
@@ -50,6 +84,16 @@ export const TitleTracker = styled.div`
   font-weight: 500;
   span {
     color: #0d003a;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    text-align: center;
+  }
+  @media screen and (max-width: 576px) {
+    color: #9c81ff;
+    span {
+      color: #fff;
+    }
   }
 `;
 export const DescTracker = styled.div`
@@ -59,12 +103,26 @@ export const DescTracker = styled.div`
   span {
     color: #0d003a;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    text-align: center;
+  }
+  @media screen and (max-width: 576px) {
+    color: #9c81ff;
+    span {
+      color: #fff;
+    }
+  }
 `;
 export const WrapperTracker = styled.div`
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2.1rem;
+  @media screen and (max-width: 768px) {
+    gap: 1.2rem;
+    justify-content: center;
+  }
 `;
 
 export const BgHero = styled.img`
@@ -72,6 +130,9 @@ export const BgHero = styled.img`
   top: 0;
   left: -40px;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const BgVirus = styled.img`
@@ -86,6 +147,9 @@ export const WrapperVirus = styled.div`
   left: 0;
   width: 30vw;
   height: 100%;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
   .virus {
     position: absolute;
   }
@@ -104,6 +168,10 @@ export const WrapperVirus = styled.div`
         transform: rotate(360deg);
       }
     }
+    @media screen and (max-width: 576px) {
+      margin-left: -5vw;
+      margin-top: -5vh;
+    }
   }
   #virus2.virus {
     margin-left: 27vw;
@@ -119,6 +187,10 @@ export const WrapperVirus = styled.div`
       to {
         transform: rotate(360deg);
       }
+    }
+    @media screen and (max-width: 1024px) {
+      margin-left: 65vw;
+      margin-top: 24vh;
     }
   }
   #virus3.virus {
@@ -136,6 +208,13 @@ export const WrapperVirus = styled.div`
         transform: rotate(360deg);
       }
     }
+    @media screen and (max-width: 1024px) {
+      margin-left: 45vw;
+      margin-top: 28vh;
+    }
+    @media screen and (max-width: 576px) {
+      margin-left: 7vw;
+    }
   }
   #virus4.virus {
     margin-left: 22vw;
@@ -151,6 +230,14 @@ export const WrapperVirus = styled.div`
       to {
         transform: rotate(360deg);
       }
+    }
+    @media screen and (max-width: 1024px) {
+      margin-left: 70vw;
+      margin-top: 35vh;
+    }
+    @media screen and (max-width: 768px) {
+      transform: scale(0.5);
+      margin-left: 50vw;
     }
   }
 `;
