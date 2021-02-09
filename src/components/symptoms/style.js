@@ -15,8 +15,15 @@ export const Title = styled.h3`
   font-size: 18px;
   color: #0d003a;
   text-align: center;
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
-export const Image = styled.img``;
+export const Image = styled.img`
+  @media screen and (max-width: 576px) {
+    transform: scale(0.5);
+  }
+`;
 
 export const TitleMain = styled.h2`
   text-align: center;
