@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import date from "date-and-time";
+import { parse } from "date-format-parse";
 import {
   MainHero,
   HeroContent,
@@ -34,26 +35,33 @@ import Virus4 from "assets/images/virus4.png";
 
 const Hero = () => {
   const [indonesia, setIndonesia] = useState([]);
-  const [jakarta, setJakarta] = useState([]);
+  const [active, setActive] = useState([]);
   const [recovered, setRecovered] = useState([]);
+  const [lastUpdate, setLastUpdate] = useState("");
   const [death, setDeath] = useState([]);
-  const now = new Date();
+  const now = new Date(lastUpdate);
   const tanggal = date.format(now, "ddd, MMM DD YYYY");
   console.log(tanggal);
 
   useEffect(() => {
-    Axios.get("https://api.kawalcorona.com/indonesia")
+    Axios.get(
+      "https://api.covid19api.com/live/country/indonesia/status/confirmed"
+    )
       .then((res) => {
-        setIndonesia(res.data[0].positif);
-        setRecovered(res.data[0].sembuh);
-        setDeath(res.data[0].meninggal);
+        const data = res.data;
+        setIndonesia(data[data.length - 1].Confirmed);
+        setActive(data[data.length - 1].Active);
+        setRecovered(data[data.length - 1].Recovered);
+        setDeath(data[data.length - 1].Deaths);
+        setLastUpdate(data[data.length - 1].Date);
+        console.log(data[data.length - 1]);
       })
       .catch((err) => console.log(err));
-    Axios.get("https://api.kawalcorona.com/indonesia/provinsi")
-      .then((res) => {
-        setJakarta(res.data[0].attributes.Kasus_Posi);
-      })
-      .catch((err) => console.log(err));
+    // Axios.get("https://api.kawalcorona.com/indonesia/provinsi")
+    //   .then((res) => {
+    //     setJakarta(res.data[0].attributes.Kasus_Posi);
+    //   })
+    //   .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -98,14 +106,14 @@ const Hero = () => {
         <WrapperTracker>
           <Card
             cases={indonesia}
-            title="Total Cases"
+            title="Confirmed"
             icon={Icon1}
             bgColor="#FFD7DF"
             fontColor="#FD4B6E"
           />
           <Card
-            cases={jakarta}
-            title="Total Cases Jakarta"
+            cases={active}
+            title="Active"
             icon={Icon1}
             bgColor="#FFDDC7"
             fontColor="#FF6E0E"
