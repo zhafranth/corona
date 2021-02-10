@@ -3,7 +3,7 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
-  "start_url": ".",
+  "start_url": "/public",
   "name": "Corona",
   "description": "Corona Application",
   "short_name": "Corona",
