@@ -1,5 +1,12 @@
 const CACHE_NAME = "version-1";
-const urlsToCache = ["index.html", "offline.html"];
+const urlsToCache = [
+  "index.html",
+  "offline.html",
+  "icon-192x192.png",
+  "icon-256x256.png",
+  "icon-384x384.png",
+  "icon-512x512.png",
+];
 
 const self = this;
 
