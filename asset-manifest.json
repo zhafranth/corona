@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/corona/static/css/main.936b281b.chunk.css",
-    "main.js": "/corona/static/js/main.becdd276.chunk.js",
-    "main.js.map": "/corona/static/js/main.becdd276.chunk.js.map",
-    "runtime-main.js": "/corona/static/js/runtime-main.66ef72c9.js",
-    "runtime-main.js.map": "/corona/static/js/runtime-main.66ef72c9.js.map",
+    "main.js": "/corona/static/js/main.97043eca.chunk.js",
+    "main.js.map": "/corona/static/js/main.97043eca.chunk.js.map",
+    "runtime-main.js": "/corona/static/js/runtime-main.54027363.js",
+    "runtime-main.js.map": "/corona/static/js/runtime-main.54027363.js.map",
     "static/css/2.c9aa196e.chunk.css": "/corona/static/css/2.c9aa196e.chunk.css",
-    "static/js/2.37552640.chunk.js": "/corona/static/js/2.37552640.chunk.js",
-    "static/js/2.37552640.chunk.js.map": "/corona/static/js/2.37552640.chunk.js.map",
-    "static/js/3.9812ea5c.chunk.js": "/corona/static/js/3.9812ea5c.chunk.js",
-    "static/js/3.9812ea5c.chunk.js.map": "/corona/static/js/3.9812ea5c.chunk.js.map",
+    "static/js/2.f8ea1299.chunk.js": "/corona/static/js/2.f8ea1299.chunk.js",
+    "static/js/2.f8ea1299.chunk.js.map": "/corona/static/js/2.f8ea1299.chunk.js.map",
+    "static/js/3.0f915884.chunk.js": "/corona/static/js/3.0f915884.chunk.js",
+    "static/js/3.0f915884.chunk.js.map": "/corona/static/js/3.0f915884.chunk.js.map",
     "index.html": "/corona/index.html",
     "static/css/2.c9aa196e.chunk.css.map": "/corona/static/css/2.c9aa196e.chunk.css.map",
     "static/css/main.936b281b.chunk.css.map": "/corona/static/css/main.936b281b.chunk.css.map",
-    "static/js/2.37552640.chunk.js.LICENSE.txt": "/corona/static/js/2.37552640.chunk.js.LICENSE.txt",
+    "static/js/2.f8ea1299.chunk.js.LICENSE.txt": "/corona/static/js/2.f8ea1299.chunk.js.LICENSE.txt",
     "static/media/bg-hero.b5aef994.png": "/corona/static/media/bg-hero.b5aef994.png",
     "static/media/gejala1.1eb6b2b7.png": "/corona/static/media/gejala1.1eb6b2b7.png",
     "static/media/gejala2.ee530fd0.png": "/corona/static/media/gejala2.ee530fd0.png",
@@ -27,10 +27,10 @@
     "static/media/virus4.2867e903.png": "/corona/static/media/virus4.2867e903.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.66ef72c9.js",
+    "static/js/runtime-main.54027363.js",
     "static/css/2.c9aa196e.chunk.css",
-    "static/js/2.37552640.chunk.js",
+    "static/js/2.f8ea1299.chunk.js",
     "static/css/main.936b281b.chunk.css",
-    "static/js/main.becdd276.chunk.js"
+    "static/js/main.97043eca.chunk.js"
   ]
 }
