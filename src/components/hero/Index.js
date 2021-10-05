@@ -41,7 +41,7 @@ const Hero = () => {
   const [death, setDeath] = useState([]);
   const now = new Date(lastUpdate);
   const tanggal = date.format(now, "ddd, MMM DD YYYY");
-  console.log(tanggal);
+  console.log(now);
 
   useEffect(() => {
     Axios.get(
@@ -57,11 +57,6 @@ const Hero = () => {
         console.log(data[data.length - 1]);
       })
       .catch((err) => console.log(err));
-    // Axios.get("https://api.kawalcorona.com/indonesia/provinsi")
-    //   .then((res) => {
-    //     setJakarta(res.data[0].attributes.Kasus_Posi);
-    //   })
-    //   .catch((err) => console.log(err));
   }, []);
 
   return (
